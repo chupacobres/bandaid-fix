@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Navigation.css";
 import bandaid from "../../assets/bandaid.png";
-import Modal from "../FormLogIn/Modal";
+// import Modal from "../FormLogIn/Modal";
 import {Link} from "react-router-dom";
 
 class Navigation extends Component {
@@ -54,13 +54,13 @@ class Navigation extends Component {
                             <a href="#" onClick={handleClick}>  Login</a>
                         </li>
                     </ul>
-                    {this.state.show ?
+                    {/* {this.state.show ?
                         <Modal
                             close={handleClose}
                             handleInputChange={handleInputChange}
                             handleFormSubmit={handleFormSubmit} />
                         : null
-                    } 
+                    }  */}
                 </div>
             </nav>
         );

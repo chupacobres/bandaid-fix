@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
+import axios from 'axios';
 import "./FormLogIn.css";
 
-export default class FormLogIn extends Component {
+export default class FormSignUp extends Component {
   constructor(props) {
-
+      super(props);
 
     this.onChangeCreateName = this.onChangeCreateName.bind(this);
     this.onChangeCreateEmail = this.onChangeCreateEmail.bind(this);
@@ -79,6 +80,19 @@ export default class FormLogIn extends Component {
     console.log(`band Description: ${this.state.band_description}`);
     console.log(`band Youtube: ${this.state.band_youtube}`);
 
+    const newBand = {
+      band_name: this.state.band_name,
+      band_email: this.state.band_email,
+      band_password: this.state.band_password,
+      band_genre: this.state.band_genre,
+      band_setup: this.state.band_setup,
+      band_description: this.state.band_description,
+      band_youtube: this.state.band_youtube
+    }
+
+    axios.post('http://localhost:3000/band/add', newBand)
+    .then(res => console.log(res.data));
+
     this.setState({
       band_name: '',
       band_email: '',
@@ -122,4 +136,3 @@ export default class FormLogIn extends Component {
     }
 }
 
-export default FormSignUp;

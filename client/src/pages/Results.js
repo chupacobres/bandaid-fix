@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Navigation from '../components/Navigation/Navigation';
-import Bands from '../components/Bands/Bands'
+// import Bands from '../components/Bands/Bands'
 import Search from '..//components/Search/Search'
 import API from '../utils/API';
 // import { Link } from "react-router-dom";
@@ -32,9 +32,9 @@ class Results extends Component {
         // searchBands={this.searchBands} 
         />
 
-        <Bands 
+        {/* <Bands 
         // results={this.state.bandsList} 
-        />
+        /> */}
       </div>
     );
   }
