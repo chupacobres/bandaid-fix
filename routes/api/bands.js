@@ -12,8 +12,4 @@ router
   .put(bandaidController.update)
   .delete(bandaidController.remove);
 
-router
-.route("/all/:search")
-.get(bandaidController.findByGenre)
-
 module.exports = router;

@@ -14,12 +14,6 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findByGenre: function (req, res) {
-    db.Band
-      .findByGenre(req.params.search)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
   update: function (req, res) {
     db.Band
       .findOneAndUpdate({ _id: req.params.id }, req.body)

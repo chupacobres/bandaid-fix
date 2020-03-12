@@ -1,11 +1,16 @@
 import React from 'react';
 import './App.css';
-import { Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import Home from './pages/Home';
 import SingleBandResult from './pages/SingleBandResult';
 import Navigation from './components/Navigation/Navigation';
 import Results from './pages/Results';
-import { Router } from 'express';
 
 function App() {
   return (
