@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,25 +6,29 @@ import {
   Link
 } from "react-router-dom";
 
-import Home from './pages/Home';
-import SingleBandResult from './pages/SingleBandResult';
-import Navigation from './components/Navigation/Navigation';
+import FormSignUp from './components/FormSignUp/FormSignUp';
+import FormLogIn from './components/FormLogIn/FormLogIn'
 import Results from './pages/Results';
+import Navigation from './components/Navigation/Navigation'
+import Footer from './components/Footer/Footer'
+import Home from './pages/Home'
+
 
 function App() {
   return (
-    <Router>
+    <div>
+      <Navigation />
       <div>
-        <Navigation />
-        <div>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/bands/:id" component={SingleBandResult} />
-            <Route exact path="/all/:search" component={Results} />
-          </Switch>
-        </div>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/all/:search" component={Results} />
+          <Route exact path="/account" component={FormSignUp} />
+          <Route exact path="/signin" component={FormLogIn} />
+        </Switch>
       </div>
-    </Router>
+      <Footer />
+    </div>
+
   );
 }
 
